@@ -1,0 +1,32 @@
+
+<div style="margin-top: 70px;">
+    <p ><a href="/criar"><input type="submit" value="Nova Postagem" class="btn btn-success"></a></p>
+</div>
+
+ {{#each arquivo}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <p>
+                Titulo: {{Titulo}}
+            </p>
+            <p>
+                Conteudo: {{Conteudo}} 
+            </p>
+            <p>
+                Descrição: {{Descricao}}
+            </p>
+            <p>
+                Links: {{Links}}
+            </p>
+            <p>
+                Data de postagem: {{Data}}
+            </p>
+            <p>
+                <a href="/postagem/editar/{{_id}}"><button class="btn btn-success">Editar</button></a>
+                <a href="/postagem/deletar/{{_id}}"><button class="btn btn-danger">Deletar</button></a>
+            </p>
+        </div>
+    </div>
+ {{else}}
+   <div class="alert alert-danger">Não há postagens disponiveis</div>
+ {{/each}}

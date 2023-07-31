@@ -1,0 +1,30 @@
+<div class="card">
+    <div class="card-body">
+        <form action="/postagem/editar/salvar" method="post">
+            <p>
+               <input type="hidden"  name="id" value="{{arquivo._id}}" > 
+            </p>
+            <p>
+                <label for="">Titulo: </label>
+                <input type="text" name="titulo" class="form-control" required value="{{arquivo.Titulo}}">
+            </p>
+            <p>
+                <label for="descricao">Descrição: </label>
+                <textarea name="descricao" id="" class="form-control" required value="{{arquivo.Descricao}}"></textarea>
+
+            </p>
+            <p>
+                <label for="conteudo">Conteudo: </label>
+                <textarea name="conteudo" id="" class="form-control" required value="{{arquivo.Conteudo}}"></textarea>
+            </p>
+            <p>
+                <label for="links">Links: </label>
+                <textarea name="links" class="form-control" required value="{{arquivo.Links}}"></textarea>
+            </p>
+            <p>
+                <input type="submit" value="Salvar" class="btn btn-success">
+                <input type="reset" value="Limpar" class="btn btn-danger">
+            </p>
+        </form>
+    </div>
+</div>

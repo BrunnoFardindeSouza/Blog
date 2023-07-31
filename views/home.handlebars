@@ -1,0 +1,33 @@
+<div class="card">
+  <div class="card-header">
+    Home
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Bem-Vindo</h5>
+    <p class="card-text">Blog criado por Brunno Fardin de Souza, com intuito de testar seus conhecimentos.</p>
+    <a href="/registrar" class="btn btn-primary">Regitra-se</a>
+  </div>
+</div>
+<hr>
+<h3>Postagens recentes</h3>
+{{#each arquivo}}
+    <div class="card mt-2">
+        <div class="card-body">
+            <p>
+                Titulo: {{Titulo}}
+            </p>
+            <p>
+                Descrição: {{Descricao}}
+            </p>
+            <p>
+              Data de postagem: {{Data}}
+            </p>
+            <p>
+              <a href="/postagem/leia/{{_id}}"><button class="btn btn-success">Leia Mais</button></a>
+            </p>
+        </div>
+    </div>
+{{else}}
+  <div class="alert alert-danger">Não há postagens no momento</div>
+  <div><a href="/criar"><button class="btn btn-success">Criar Postagem</button></a></div>
+{{/each}}
